@@ -1,0 +1,11 @@
+@import '../../node_modules/bulma/sass/utilities/initial-variables';
+@import '../../node_modules/bulma/sass/utilities/derived-variables';
+@import '../../node_modules/bulma/sass/utilities/mixins';
+
+// Overflow
+.is-clipped {
+  overflow: hidden !important;
+}
+
+@import '../../node_modules/bulma/sass/components/modal';
+@import '../../node_modules/bulma/sass/elements/box';

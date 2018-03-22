@@ -5,8 +5,12 @@ export default class Modal extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { isOpen: true };
+    this.state = { isOpen: this.props.showModal };
     this.handleClose = this.handleClose.bind(this);
+  }
+
+  componentWillReceiveProps() {
+    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
   }
 
   handleClose() {
@@ -15,7 +19,9 @@ export default class Modal extends Component {
 
   render() {
     if (this.state.isOpen) {
-      document.getElementById('root').classList.toggle('clipped');
+      document.body.classList.add('is-clipped');
+    } else {
+      document.body.classList.remove('is-clipped');
     }
 
     return (
