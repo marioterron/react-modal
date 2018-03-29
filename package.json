@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "run-s clean:build build:component",
-    "build:component": "microbundle --output=build",
+    "build:component": "microbundle --output=build --format=cjs",
     "clean:cache": "rimraf ./.cache",
     "clean:build": "rimraf ./build",
     "watch": "parcel examples/index.html -p 3030",
