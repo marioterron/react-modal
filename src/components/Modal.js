@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './modal.scss';
 
-export default class Modal extends Component {
+export default class Modal extends React.Component {
   constructor(props) {
     super(props);
 
